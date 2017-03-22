@@ -53,14 +53,6 @@ class Bot:
         print "d",
 
 # Driver Program
-if __name__ == '__main__':
-    grid = []
-    grid.append(["0", "0", "0"])
-    grid.append(["0", "0", "0",])
-    # grid.append(["E2E", "323", "6D2", "976", "83F", "C96"])
-    # grid.append(["9E9", "A8B", "9C1", "461", "F74", "D05"])
-    # grid.append(["EDD", "E94", "5F4", "D1D", "D03", "DE3"])
-    # grid.append(["89", "925", "CF9", "CA0", "F18", "4D2"])
-    b = Bot(grid)
-    print b.traverse()
+# if __name__ == '__main__':
+#     pass
 
