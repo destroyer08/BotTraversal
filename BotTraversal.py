@@ -26,7 +26,7 @@ class Bot:
             for j in range(1,m):
                 trace[i][j] = self.toInt(self.grid[i][j]) + min(trace[i-1][j], trace[i][j-1])
         self.pathFinder(trace, n, m)
-        return str(self.toHex(trace[n-1][m-1])).lstrip("0x")
+        return str(self.toHex(trace[n-1][m-1]))[2:]
 
     def pathFinder(self, trace, n, m):
         '''Traversing trace matrix to find path direction on each location'''
@@ -53,14 +53,14 @@ class Bot:
         print "d",
 
 # Driver Program
-# if __name__ == '__main__':
-#     grid = []
-#     grid.append(["46B", "E59", "EA", "C1F", "45E", "63"])
-#     grid.append(["899", "FFF", "926", "7AD", "C4E", "FFF"])
-#     grid.append(["E2E", "323", "6D2", "976", "83F", "C96"])
-#     grid.append(["9E9", "A8B", "9C1", "461", "F74", "D05"])
-#     grid.append(["EDD", "E94", "5F4", "D1D", "D03", "DE3"])
-#     grid.append(["89", "925", "CF9", "CA0", "F18", "4D2"])
-#     b = Bot(grid)
-#     print b.traverse()
+if __name__ == '__main__':
+    grid = []
+    grid.append(["0", "0", "0"])
+    grid.append(["0", "0", "0",])
+    # grid.append(["E2E", "323", "6D2", "976", "83F", "C96"])
+    # grid.append(["9E9", "A8B", "9C1", "461", "F74", "D05"])
+    # grid.append(["EDD", "E94", "5F4", "D1D", "D03", "DE3"])
+    # grid.append(["89", "925", "CF9", "CA0", "F18", "4D2"])
+    b = Bot(grid)
+    print b.traverse()
 
